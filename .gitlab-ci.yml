@@ -1,0 +1,17 @@
+# Use composer as image
+image: registry.build.deploy.run/demo/kubernetes-deploy
+
+services:
+  - docker:dind
+
+variables:
+  DOCKER_HOST: tcp://localhost:2375
+  DOCKER_DRIVER: overlay2
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - command build
