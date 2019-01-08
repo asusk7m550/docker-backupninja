@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt update && apt install -y backupninja ssh rdiff rdiff-backup && apt clean
+RUN apt update && apt install -y backupninja ssh rdiff rdiff-backup mysql-client && apt clean
 
 ADD files/entrypoint.sh /usr/local/bin/entrypoint.sh
 
