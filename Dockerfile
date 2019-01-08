@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt update && apt install -y backupninja ssh rdiff && apt clean
+RUN apt update && apt install -y backupninja ssh rdiff rdiff-backup && apt clean
 
 ADD files/entrypoint.sh /usr/local/bin/entrypoint.sh
 
